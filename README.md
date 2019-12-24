@@ -133,11 +133,15 @@ A recipe typically consists of multiple steps. It is strongly recommended to run
 
 ```
 ./run.sh --stage 0 --stop-stage 0
+Or
+./run.sh --stage 0 --stop-stage 0 --db-root ../../wav/
 ```
 
 ```
 ./run.sh --stage 1 --stop-stage 1
 ```
+
+此时数据已经归一化且有均值文件，训练一下看看
 
 ```
 ./run.sh --stage 2 --stop-stage 2
@@ -145,9 +149,12 @@ A recipe typically consists of multiple steps. It is strongly recommended to run
 
 In typical situations, you'd need to specify CUDA devices explciitly expecially for training step.
 
+
 ```
 CUDA_VISIBLE_DEVICES="0,1" ./run.sh --stage 2 --stop-stage 2
 ```
+
+如果想用自己的数据训练，那么需要替换那些刚刚生成的数据文件，脚本如下,在./egs/mol中
 
 ### Docs for command line tools
 
