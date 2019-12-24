@@ -5,13 +5,13 @@
   "preprocess": "",
   "postprocess": "",
   "global_gain_scale": 1.0,
-  "sample_rate": 22050,
+  "sample_rate": 16000,
   "silence_threshold": 2,
   "num_mels": 80,
   "fmin": 125,
   "fmax": 7600,
   "fft_size": 1024,
-  "hop_size": 256,
+  "hop_size": 240,
   "frame_shift_ms": null,
   "win_length": 1024,
   "win_length_ms": -1.0,
@@ -33,10 +33,10 @@
   "upsample_net": "ConvInUpsampleNetwork",
   "upsample_params": {
     "upsample_scales": [
+      5,
       4,
       4,
-      4,
-      4
+      3
     ]
   },
   "gin_channels": -1,
